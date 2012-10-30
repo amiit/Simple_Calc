@@ -1,0 +1,79 @@
+﻿<phone:PhoneApplicationPage 
+        x:Class="Sim.Calculator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="#FF442A96"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" Background="{Binding}" BorderBrush="#FF004B00" DataContext="{Binding}" Loaded="PhoneApplicationPage_Loaded">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Blue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="SIMPLE CALCULATOR" Style="{StaticResource PhoneTextNormalStyle}" Foreground="#FFF032D8" OpacityMask="#FF431DDE" />
+            <TextBlock x:Name="PageTitle" Text="AMIT TIWARI" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="#FF53525C" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="195*" />
+                <RowDefinition Height="60*" />
+                <RowDefinition Height="19*" />
+                <RowDefinition Height="60*" />
+                <RowDefinition Height="19*" />
+                <RowDefinition Height="61*" />
+                <RowDefinition Height="19*" />
+                <RowDefinition Height="61*" />
+                <RowDefinition Height="18*" />
+                <RowDefinition Height="61*" />
+                <RowDefinition Height="34*" />
+            </Grid.RowDefinitions>
+            <TextBox Height="133" HorizontalAlignment="Left" Name="textBox1" Text="" VerticalAlignment="Top" Width="480" Margin="0,32,0,0" Foreground="#FF471DCB" Background="Tomato" />
+            <Button Content="0" Height="81" HorizontalAlignment="Left" Name="button1" VerticalAlignment="Top" Width="201" Grid.Row="8" Grid.RowSpan="3" Margin="0,9,0,0" Click="button1_Click" OpacityMask="#FF462DAA" Foreground="#FF17E2D3" Background="Tomato" />
+            <Button Content="." Height="81" HorizontalAlignment="Left" Margin="207,9,0,0" Name="button2" VerticalAlignment="Top" Width="129" Grid.Row="8" Grid.RowSpan="3" Click="button2_Click" Foreground="#FF12E8D8" Background="Tomato" />
+            <Button Content="+" Height="81" HorizontalAlignment="Left" Margin="337,9,0,0" Name="button3" VerticalAlignment="Top" Width="131" Grid.Row="8" Grid.RowSpan="3" Click="button3_Click" Foreground="#FF15EBDB" Background="Tomato" />
+            <Button Content="1" Height="83" HorizontalAlignment="Left" Name="button4" VerticalAlignment="Top" Width="114" Grid.Row="6" Grid.RowSpan="3" Margin="0,8,0,0" Click="button4_Click" Foreground="#FF1BE8D9" Background="Tomato" />
+            <Button Content="2" Height="83" HorizontalAlignment="Left" Margin="110,8,0,0" Name="button5" VerticalAlignment="Top" Width="115" Grid.Row="6" Grid.RowSpan="3" Click="button5_Click" Foreground="#FF06EFDE" Background="Tomato" />
+            <Button Content="3" Height="83" HorizontalAlignment="Left" Margin="224,8,0,0" Name="button6" VerticalAlignment="Top" Width="112" Grid.Row="6" Grid.RowSpan="3" Click="button6_Click" Foreground="#FF12EFDF" Background="Tomato" />
+            <Button Content="-" Height="83" HorizontalAlignment="Left" Margin="342,8,0,0" Name="button7" VerticalAlignment="Top" Width="126" Grid.Row="6" Grid.RowSpan="3" Click="button7_Click" Foreground="#FF15EBDC" Background="Tomato" />
+            <Button Content="4" Height="83" HorizontalAlignment="Left" Name="button8" VerticalAlignment="Top" Width="114" Grid.Row="4" Grid.RowSpan="3" Margin="0,10,0,0" Click="button8_Click" Foreground="#FF17E5D5" Background="Tomato" />
+            <Button Content="5" Height="81" HorizontalAlignment="Left" Margin="110,10,0,0" Name="button9" VerticalAlignment="Top" Width="115" Grid.Row="4" Grid.RowSpan="3" Click="button9_Click" Foreground="#FF12EFDE" Background="Tomato" />
+            <Button Content="6" Height="81" HorizontalAlignment="Left" Margin="224,10,0,0" Name="button10" VerticalAlignment="Top" Width="112" Grid.Row="4" Grid.RowSpan="3" Click="button10_Click" Foreground="#FF12EBDB" Background="Tomato" />
+            <Button Content="*" Height="81" HorizontalAlignment="Left" Margin="342,10,0,0" Name="button11" VerticalAlignment="Top" Width="124" Grid.Row="4" Grid.RowSpan="3" Click="button11_Click" Foreground="#FF0FEBDB" Background="Tomato" />
+            <Button Content="7" Height="78" HorizontalAlignment="Left" Name="button12" VerticalAlignment="Top" Width="114" Grid.Row="2" Grid.RowSpan="3" Margin="0,11,0,0" Click="button12_Click" Foreground="#FF0ED4C4" Background="Tomato" />
+            <Button Content="8" Height="80" HorizontalAlignment="Left" Margin="110,11,0,0" Name="button13" VerticalAlignment="Top" Width="115" Grid.Row="2" Grid.RowSpan="3" Click="button13_Click" Foreground="#FF14E2D1" Background="Tomato" />
+            <Button Content="9" Height="78" HorizontalAlignment="Left" Margin="224,11,0,0" Name="button14" VerticalAlignment="Top" Width="112" Grid.Row="2" Grid.RowSpan="3" Click="button14_Click" Foreground="#FF1BE8D8" Background="Tomato" />
+            <Button Content="/" Height="78" HorizontalAlignment="Right" Margin="0,11,2,0" Name="button15" VerticalAlignment="Top" Width="124" Grid.Row="2" Grid.RowSpan="3" Click="button15_Click" Foreground="#FF19D8C9" Background="Tomato" />
+            <Button Content="OFF" Height="79" HorizontalAlignment="Left" Name="button16" VerticalAlignment="Top" Width="114" Grid.RowSpan="3" Margin="0,188,0,0" Click="button16_Click" Foreground="#FF14E283" Background="Tomato" />
+            <Button Content="=" Height="78" HorizontalAlignment="Left" Margin="110,188,0,0" Name="button17" VerticalAlignment="Top" Width="115" Grid.RowSpan="3" Click="button17_Click" Foreground="#FF1CEFBF" Background="Tomato" />
+            <Button Content="&lt;--" Height="78" HorizontalAlignment="Left" Margin="224,188,0,0" Name="button18" VerticalAlignment="Top" Width="112" Grid.RowSpan="3" Click="button18_Click" Foreground="#FF17DECF" Background="Tomato" />
+            <Button Content="ON" Height="78" HorizontalAlignment="Left" Margin="342,188,0,0" Name="button19" VerticalAlignment="Top" Width="124" Grid.RowSpan="3" Click="button19_Click" Foreground="#FF18EFDE" Background="Tomato" />
+        </Grid>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
